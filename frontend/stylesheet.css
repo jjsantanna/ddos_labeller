@@ -1,0 +1,291 @@
+<style>
+html {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+body {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+	background: #eee;
+	color: #222;
+	width: 90%;
+	max-width: 840px;
+	padding: 20px 15px 50px 15px;
+	margin: 30px auto;
+}
+h1 {
+	font-size: 52px;
+	font-weight: normal;
+	letter-spacing: -2px;
+	margin: 0;
+	padding: 0;
+	text-shadow: 0px 1px 0px #fff;
+}
+h2 {
+	font-size: 26px;
+	letter-spacing: -1px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+h3 {
+	font-size: 24px;
+	font-weight: normal;
+	color: #000;
+	margin: 0 0 10px 0;
+	padding: 20px 0 0 0;
+	border-bottom: dotted #ccc 1px;
+	line-height: 130%;
+}
+p {
+	margin: 0 0 20px 0;
+	padding: 0;
+	line-height: 140%;
+	text-shadow: 0px 1px 0px #fff;
+}
+a {
+	color: #0192DD;
+	text-decoration: none;
+	border-bottom: dotted #0192DD 1px;
+}
+a:hover {
+	color: #000;
+	border-bottom: dotted #000 1px;
+}
+
+code {
+	background: #ddd;
+	color: #333;
+	text-shadow: 0px 1px 0px #eee;
+	padding: 0 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-family: monospace;
+}
+pre {
+	background: #222;
+	color: #ddd;
+	padding: 15px 20px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-family: 'Consolas', monospace;
+	font-size: 13px;
+	line-height: 140%;
+}
+pre em {
+	color: #fff;
+	font-style: normal;
+	background: #111;
+}
+
+ol {
+	margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+}
+ol li {
+	list-style: decimal;
+}
+ol li p {
+	margin: 0 0 5px 0;
+}
+dl {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+dl dt,
+dl dd {
+	margin: 0;
+	padding: 0;
+}
+a, div, input {
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+
+
+
+.examples-list dt {
+	font-size: 13px;
+	border-bottom: dotted #ccc 1px;
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+	display: list-item;
+	list-style: inside square;
+}
+.examples-list dd {
+	padding: 10px 0;
+}
+
+
+
+
+
+
+#download-link {
+	display: block;
+	/*float: left;*/
+	width: auto;
+	margin: 0 0 20px 0;
+	padding: 0 30px;
+	font-size: 12px;
+	text-align: center;
+	text-shadow: 0px -1px 0px #0172bd;
+	border: solid #0172bd 1px;
+	border-bottom: solid #00428d 1px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+
+	background-color: #0192DD;
+	background-image: linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -o-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -moz-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -webkit-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -ms-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #1774A3),
+		color-stop(0.56, #0194DD)
+	);
+	
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2), 0px 1px 0px #fff, 0px -1px 0px rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2), 0px 1px 0px #fff, 0px -1px 0px rgba(0,0,0,.1);
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,.2), 0px 1px 0px #fff, 0px -1px 0px rgba(0,0,0,.1); 	
+	
+	color: #fff;
+	height: 30px;
+	line-height: 30px;	
+}
+
+
+
+.nice {
+	font-family: arial;
+	font-size: 12px;
+	float: left;
+	-webkit-box-shadow: 0px 1px 0px #fff, 0px -1px 0px rgba(0,0,0,.1);
+	-moz-box-shadow: 0px 1px 0px #fff, 0px -1px 0px rgba(0,0,0,.1);
+	box-shadow: 0px 1px 0px #fff, 0px -1px 0px rgba(0,0,0,.1); 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.nice .NFI-button {
+	-moz-border-radius-topleft: 3px; 
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px; 
+	border-bottom-left-radius: 3px;
+
+	background-color: #0192DD;
+
+	background-image: linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -o-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -moz-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -webkit-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -ms-linear-gradient(bottom, #1774A3 0%, #0194DD 56%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #1774A3),
+		color-stop(0.56, #0194DD)
+	);
+	text-shadow: 0px -1px 0px #0172bd;
+	border: solid #0172bd 1px;
+	border-bottom: solid #00428d 1px;
+	
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+	-moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,.2);
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,.2); 	
+	
+	color: #fff;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+}
+.nice .NFI-button:hover {
+	background: #333;
+	text-shadow: 0px -1px 0px #111;
+	border: solid #000 1px;
+	
+}
+.nice .NFI-filename {
+	-moz-border-radius-topright: 3px; 
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px; 
+	border-bottom-right-radius: 3px;
+
+	width: 200px;
+	border: solid #777 1px;
+	border-left: none;
+	height: 30px;
+	line-height: 30px;
+	
+	background: #fff;
+	-webkit-box-shadow: inset 0px 2px 0px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0px 2px 0px rgba(0,0,0,.05);
+	box-shadow: inset 0px 2px 0px rgba(0,0,0,.05); 
+
+	color: #777;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.test .NFI-button{
+	background-color: #DD9201; /* 1774A3, 0192DD : A37417, DD9201 */ 
+	background-image: linear-gradient(bottom, #A37417 0%, #DD9201 56%);
+	background-image: -o-linear-gradient(bottom, #A37417 0%, #DD9201 56%);
+	background-image: -moz-linear-gradient(bottom, #A37417 0%, #DD9201 56%);
+	background-image: -webkit-linear-gradient(bottom, #A37417 0%, #DD9201 56%);
+	background-image: -ms-linear-gradient(bottom, #A37417 0%, #DD9201 56%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #A37417),
+		color-stop(0.56, #DD9201)
+	);
+	text-shadow: none;
+	border: solid #bb7200 1px;
+	border-bottom: solid #995200 1px;
+}
+.test .NFI-button:hover {
+	background: #bb7200;
+	text-shadow: none;
+	border: solid #995200 1px;	
+}
+.test .NFI-filename {
+	border: solid #eee 1px;
+	color: #777;
+}
+
+/*#load{
+    display: block;
+    margin: auto;
+    width: 40%;
+}*/
+
+</style>

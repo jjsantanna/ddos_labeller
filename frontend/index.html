@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Multi-Vector DDoS Attack Labeler</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="author" content="Jair Santanna. @jalterebro" />
+	<meta name="description" content="Practical Labeler of Multi-vector DDoS Attack." />
+	
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+
+	<script src="libs/jquery-3.2.1.min.js"></script>
+	<script src="libs/jquery.nicefileinput.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("input[type=file].nicefileinput").nicefileinput();
+	$("#download-link").click(function(){
+		$('html, body').animate({scrollTop: $("#download").offset().top},'slow');
+		return false;
+	});
+});
+</script>
+
+<script type="text/javascript">
+var waiting={
+	ajax:function(st)
+	    {
+	        this.show('load');
+	    },
+	show:function(el)
+	    {
+	        this.getID(el).style.display='';
+	    },
+	getID:function(el)
+	    {
+	        return document.getElementById(el);
+	    }
+}
+</script>
+</head>
+
+<body>
+<h1>(Multi-)Vector <strong>DDoS Attack</strong> Labeler</h1>
+<h2>A practical way to label DDoS attacks within packet-based network traces.</h2>
+
+<h3>About</h3>
+<p>
+	From a network perspective, a DDoS attack is set of packets with simillar characteristics sent by more than one source IP addresses. Nowadays attacks, instead of being composed of a single set of attack characteristics (single attack vector), it has being composed by multiple sets of characteristics, multi-vector attacks. 
+	<!-- This second type of attack 
+
+	We analyse packet-based network traces (input) to find . 
+
+	Single attack target
+	
+
+	trigger specific mitigation
+	account for attacks
+	be practical
+	public -->
+</p>
+<p>
+	This initiative is lidered by <a href="http://www.nbip.nl"><strong> the Nationale Beheersorganisatie Internet Providers (NBIP)</strong></a> and under the scientific and technical supervision and development of <a href="http://www.jairsantanna.com"><strong>Jair Santanna</strong></a>. Available at his <a href="https://github.com/jjsantanna/ddos_labeling">GitHub repository</a> to facilitate the re-usage and the improvement proposed by the community. You can also read the <a href="www.ddos-patterns.net">post</a> that describes our approach.
+</p>
+
+
+
+<h3>Try It</h3>
+
+
+<form action="cgi-bin/ddos_labeling.py" method="POST" enctype="multipart/form-data" onsubmit="return waiting.ajax()">
+	
+ 		<input name="inputfile" type="file" accept=".pcap" class="nicefileinput nice"/>
+    	<input type="submit" value="Classify" id="download-link" />
+
+    	<input name="delete" type="checkbox" value="Bike"> I authorize NBIP to keep my network trace for improving future DDoS attack labeling & classification.<br>
+</form>
+<br>
+<p>*By default, after our analysis, we do <strong>not</strong> keep your network trace and the meta-information produced to label DDoS attacks, unless you authorize us!</p> 
+
+<div class="load" style="display:none;width:100%" >
+	<img src="figs/loading3.gif" width="200" align="middle">
+</div>
+
+<br>
+
+<h3>Future steps</h3>
+<p>We intend to .</p> <br>
+
+
+</body>
+</html>
